@@ -41,7 +41,8 @@ class Question{
             this.option4.hide();
 
 
-            constestant.name=this.input1.value()
+           contestant.name=this.input1.value()
+           contestant.answer=this.input2.value()
             contestantCount=contestantCount+1;
             contestant.index=contestantCount
             contestant.update()
@@ -58,7 +59,12 @@ class Question{
         this.input1.hide()
         this.input2.hide();
         this.button.hide();
-        this.option.hide()
         this.question.hide()
+
+        this.title.hide()
+        this.option1.hide();
+        this.option2.hide();
+        this.option3.hide();
+        this.option4.hide();
     }
 }

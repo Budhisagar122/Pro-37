@@ -2,7 +2,7 @@ class Contestant{
     constructor(){
         this.name=null
         this.index=null
-        this.distance=0
+        this.answer=null
     }
     getCount(){
         var countref=database.ref('contestantCount')
@@ -18,12 +18,12 @@ class Contestant{
         var contestantIndex="contestants/contestant"+contestantCount
         database.ref(contestantIndex).set({
             name:this.name,
-            distance:this.distance
+            answer:this.answer
 
         })
         
     }
-    static getcontestantsInfo(){
+    static getContestantsInfo(){
         var contestantref=database.ref('contestants')
         contestantref.on("value",(data)=>{allContestants=data.val()})
     }
